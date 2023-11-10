@@ -1,0 +1,83 @@
+.main {
+  @apply flex justify-center items-center min-h-screen;
+}
+
+.container {
+  @apply w-[650px] h-[500px] grid grid-cols-2 grid-rows-2 rounded-lg overflow-hidden text-white;
+}
+
+.container > div:first-of-type {
+  @apply bg-white col-span-2 pl-10 text-black;
+}
+
+.container > div:first-of-type h1 {
+  @apply text-[#3cb0b0] font-bold text-[25px] mt-8 mb-4;
+}
+
+.container > div:first-of-type span {
+  @apply text-[#c0d55c] font-bold mb-2 block;
+}
+
+.container > div:first-of-type p {
+  @apply text-[#a9adb8] text-sm max-w-lg;
+}
+
+.container > div:nth-child(2) {
+  @apply bg-[#2bb3b1] col-span-1 pl-10;
+}
+
+.container div:nth-child(2) h2 {
+  @apply font-bold tracking-wider mt-8 mb-2;
+}
+
+.container div:nth-child(2) div {
+  @apply flex justify-start items-center gap-3 w-full;
+}
+
+.container div:nth-child(2) div h3 {
+  @apply text-[30px] font-bold;
+}
+
+.container div:nth-child(2) div span {
+  @apply text-[#79e7e8] font-thin;
+}
+
+.container div:nth-child(2) p {
+  @apply text-[#d4ffff] mb-7;
+}
+
+.container div:nth-child(2) button {
+  @apply bg-[#bfdf32] w-[250px] h-10 rounded;
+}
+
+.container div:nth-child(3) {
+  @apply bg-[#4abebd] col-span-1 pl-10;
+}
+
+.container div:nth-child(3) h3 {
+  @apply font-bold tracking-wide mt-8 mb-3;
+}
+
+.container div:nth-child(3) p {
+  @apply text-[#a9feff] max-w-[230px];
+}
+
+@media (max-width: 670px) {
+  .container {
+    @apply h-[730px] mx-8 w-[340px] my-12;
+  }
+
+  .container > div:nth-child(1),
+  .container > div:nth-child(2),
+  .container > div:nth-child(3) {
+    @apply col-span-2;
+  }
+
+  .container > div:first-of-type p {
+    @apply max-w-[260px];
+  }
+
+  .container > div:nth-child(3) {
+    @apply pb-6;
+  }
+}
